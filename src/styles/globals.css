@@ -3,6 +3,9 @@
 :root {
   --font-bellefair: "Bellefair", serif;
   --font-barlow: "Barlow Condensed", sans-serif;
+  --color-black: #0b0d17;
+  --color-white: #ffffff;
+  --color-purple: #d0d6f9;
 }
 
 * {

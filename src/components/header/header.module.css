@@ -1,0 +1,86 @@
+.Menu {
+  position: relative;
+  top: 40px;
+  left: 0;
+  height: 96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Logo {
+  width: 48px;
+  height: 48px;
+  margin-left: 55px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+}
+
+.Line {
+  width: 390px;
+  height: 1px;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.25;
+  margin-left: 64px;
+}
+
+.Navigation {
+  width: 707px;
+  backdrop-filter: blur(81.55px);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.Navigation > ul {
+  margin-right: 100px;
+  font-family: var(--font-barlow);
+  font-weight: 400;
+  letter-spacing: 2.7px;
+  font-size: 16px;
+  text-transform: uppercase;
+  height: 96px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--color-white);
+  list-style: none;
+  counter-reset: list-counter -1;
+}
+
+.Navigation > ul > li:before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  text-align: right;
+  margin-right: 11px;
+  font-weight: 700;
+}
+
+.Navigation > ul > li {
+  counter-increment: list-counter;
+}
+
+.Navigation > ul > li:before {
+  content: counter(list-counter, decimal-leading-zero);
+}
+
+.Navigation ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* AQUI */
+
+.Navigation ul li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid transparent;
+}
+
+.Navigation ul li:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.Navigation ul li:active {
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
