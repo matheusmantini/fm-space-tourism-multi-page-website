@@ -3,7 +3,7 @@ import styles from "../styles/Crew.module.css";
 
 const Crew = () => {
   return (
-    <main className={styles.Container}>
+    <main className={styles.PageContainer}>
       <Header />
     </main>
   );

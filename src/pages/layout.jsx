@@ -1,3 +1,4 @@
+import { PageProvider } from "@/context/pageContext";
 import { Barlow_Condensed, Bellefair } from "next/font/google";
 
 export const bellefair = Bellefair({
@@ -14,8 +15,10 @@ export const barlow = Barlow_Condensed({
 
 export default function Layout({ children }) {
   return (
-    <main className={`${bellefair.className} ${barlow.className}`}>
-      {children}
-    </main>
+    <PageProvider>
+      <main className={`${bellefair.className} ${barlow.className}`}>
+        {children}
+      </main>
+    </PageProvider>
   );
 }

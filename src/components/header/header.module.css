@@ -17,7 +17,7 @@
 }
 
 .Line {
-  width: 390px;
+  width: 35vw;
   height: 1px;
   background-color: rgb(255, 255, 255);
   opacity: 0.25;
@@ -25,13 +25,14 @@
 }
 
 .Navigation {
-  width: 707px;
+  width: 53vw;
   backdrop-filter: blur(81.55px);
   background: rgba(255, 255, 255, 0.04);
 }
 
 .Navigation > ul {
   margin-right: 100px;
+  margin-left: 30px;
   font-family: var(--font-barlow);
   font-weight: 400;
   letter-spacing: 2.7px;
@@ -53,14 +54,11 @@
   text-align: right;
   margin-right: 11px;
   font-weight: 700;
+  content: counter(list-counter, decimal-leading-zero);
 }
 
 .Navigation > ul > li {
   counter-increment: list-counter;
-}
-
-.Navigation > ul > li:before {
-  content: counter(list-counter, decimal-leading-zero);
 }
 
 .Navigation ul li a {
@@ -74,7 +72,6 @@
   height: 100%;
   display: flex;
   align-items: center;
-  border-bottom: 3px solid transparent;
 }
 
 .Navigation ul li:hover {
@@ -82,5 +79,9 @@
 }
 
 .Navigation ul li:active {
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+.Active {
   border-bottom: 3px solid rgb(255, 255, 255);
 }

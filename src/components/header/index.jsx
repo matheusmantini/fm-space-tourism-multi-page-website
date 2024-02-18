@@ -1,10 +1,11 @@
 import Logo from "@/icons/logo";
 import Link from "next/link";
-import { useState } from "react";
 import styles from "./header.module.css";
+import { useState } from "react";
+import { usePageContext } from "@/context/pageContext";
 
 const Header = () => {
-  const [activePage, setActivePage] = useState("Home");
+  const { activePage, setActivePageHandler } = usePageContext();
 
   return (
     <div className={styles.Menu}>
@@ -14,17 +15,47 @@ const Header = () => {
       <div className={styles.Line}></div>
       <nav className={styles.Navigation}>
         <ul>
-          <li className={styles.Active}>
-            <Link href={"/"}>Home</Link>
+          <li className={`${activePage === "Home" ? styles.Active : ""}`}>
+            <Link
+              onClick={() => {
+                setActivePageHandler("Home");
+              }}
+              href={"/"}
+            >
+              Home
+            </Link>
           </li>
-          <li className={activePage === "Destination" ? styles.active : ""}>
-            <Link href={"/destination"}>Destination</Link>
+          <li
+            className={`${activePage === "Destination" ? styles.Active : ""}`}
+          >
+            <Link
+              onClick={() => {
+                setActivePageHandler("Destination");
+              }}
+              href={"/destination"}
+            >
+              Destination
+            </Link>
           </li>
-          <li className={activePage === "Crew" ? styles.active : ""}>
-            <Link href={"/crew"}>Crew</Link>
+          <li className={`${activePage === "Crew" ? styles.Active : ""}`}>
+            <Link
+              onClick={() => {
+                setActivePageHandler("Crew");
+              }}
+              href={"/crew"}
+            >
+              Crew
+            </Link>
           </li>
-          <li className={activePage === "Technology" ? styles.active : ""}>
-            <Link href={"/technology"}>Technology</Link>
+          <li className={`${activePage === "Technology" ? styles.Active : ""}`}>
+            <Link
+              onClick={() => {
+                setActivePageHandler("Technology");
+              }}
+              href={"/technology"}
+            >
+              Technology
+            </Link>
           </li>
         </ul>
       </nav>

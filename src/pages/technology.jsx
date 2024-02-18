@@ -4,7 +4,7 @@ import styles from "../styles/Technology.module.css";
 const Technology = () => {
 
   return (
-    <main className={styles.Container}>
+    <main className={styles.PageContainer}>
       <Header />
     </main>
   );
