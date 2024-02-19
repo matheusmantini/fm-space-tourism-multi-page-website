@@ -1,5 +1,5 @@
 import Header from "@/components/header";
-import styles from "../styles/Crew.module.css";
+import styles from "../styles/Crew.module.scss";
 
 const Crew = () => {
   return (

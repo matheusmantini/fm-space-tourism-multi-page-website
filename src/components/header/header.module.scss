@@ -1,30 +1,20 @@
 .Menu {
-  position: relative;
-  top: 40px;
-  left: 0;
-  height: 96px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 24px;
 }
 
 .Logo {
-  width: 48px;
-  height: 48px;
-  margin-left: 55px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: var(--color-white);
 }
 
-.Line {
-  width: 35vw;
-  height: 1px;
-  background-color: rgb(255, 255, 255);
-  opacity: 0.25;
-  margin-left: 64px;
-}
 
-.Navigation {
+
+/* .Navigation {
   width: 53vw;
   backdrop-filter: blur(81.55px);
   background: rgba(255, 255, 255, 0.04);
@@ -66,8 +56,6 @@
   text-decoration: none;
 }
 
-/* AQUI */
-
 .Navigation ul li {
   height: 100%;
   display: flex;
@@ -84,4 +72,4 @@
 
 .Active {
   border-bottom: 3px solid rgb(255, 255, 255);
-}
+} */

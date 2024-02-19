@@ -1,5 +1,6 @@
 import { PageProvider } from "@/context/pageContext";
 import { Barlow_Condensed, Bellefair } from "next/font/google";
+import styles from "../styles/Layout.module.scss";
 
 export const bellefair = Bellefair({
   subsets: ["latin"],
@@ -16,7 +17,9 @@ export const barlow = Barlow_Condensed({
 export default function Layout({ children }) {
   return (
     <PageProvider>
-      <main className={`${bellefair.className} ${barlow.className}`}>
+      <main
+        className={`${styles.MainContainer} ${bellefair.className} ${barlow.className}`}
+      >
         {children}
       </main>
     </PageProvider>

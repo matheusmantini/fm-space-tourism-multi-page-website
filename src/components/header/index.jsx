@@ -1,8 +1,7 @@
-import Logo from "@/icons/logo";
-import Link from "next/link";
-import styles from "./header.module.css";
-import { useState } from "react";
 import { usePageContext } from "@/context/pageContext";
+import Logo from "@/icons/logo";
+import Menu from "@/icons/menu";
+import styles from "./header.module.scss";
 
 const Header = () => {
   const { activePage, setActivePageHandler } = usePageContext();
@@ -10,10 +9,12 @@ const Header = () => {
   return (
     <div className={styles.Menu}>
       <div className={styles.Logo}>
-        <Logo />
+        <Logo width={"40px"} height={"40px"} />
       </div>
-      <div className={styles.Line}></div>
-      <nav className={styles.Navigation}>
+      <div className={styles.MobileMenu}>
+        <Menu />
+      </div>
+      {/* <nav className={styles.Navigation}>
         <ul>
           <li className={`${activePage === "Home" ? styles.Active : ""}`}>
             <Link
@@ -58,7 +59,7 @@ const Header = () => {
             </Link>
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </div>
   );
 };
