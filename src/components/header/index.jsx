@@ -1,10 +1,18 @@
 import { usePageContext } from "@/context/pageContext";
+import CloseIcon from "@/icons/close";
 import Logo from "@/icons/logo";
-import Menu from "@/icons/menu";
+import MenuIcon from "@/icons/menu";
+import Link from "next/link";
+import { useState } from "react";
 import styles from "./header.module.scss";
 
 const Header = () => {
   const { activePage, setActivePageHandler } = usePageContext();
+  const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
+
+  const mobileMenuHandler = (newStatus) => {
+    setMobileMenuIsOpen(newStatus);
+  };
 
   return (
     <div className={styles.Menu}>
@@ -12,54 +20,78 @@ const Header = () => {
         <Logo width={"40px"} height={"40px"} />
       </div>
       <div className={styles.MobileMenu}>
-        <Menu />
-      </div>
-      {/* <nav className={styles.Navigation}>
-        <ul>
-          <li className={`${activePage === "Home" ? styles.Active : ""}`}>
-            <Link
-              onClick={() => {
-                setActivePageHandler("Home");
-              }}
-              href={"/"}
-            >
-              Home
-            </Link>
-          </li>
-          <li
-            className={`${activePage === "Destination" ? styles.Active : ""}`}
+        {!mobileMenuIsOpen && (
+          <button
+            className={styles.Button}
+            onClick={() => mobileMenuHandler(true)}
           >
-            <Link
-              onClick={() => {
-                setActivePageHandler("Destination");
-              }}
-              href={"/destination"}
-            >
-              Destination
-            </Link>
-          </li>
-          <li className={`${activePage === "Crew" ? styles.Active : ""}`}>
-            <Link
-              onClick={() => {
-                setActivePageHandler("Crew");
-              }}
-              href={"/crew"}
-            >
-              Crew
-            </Link>
-          </li>
-          <li className={`${activePage === "Technology" ? styles.Active : ""}`}>
-            <Link
-              onClick={() => {
-                setActivePageHandler("Technology");
-              }}
-              href={"/technology"}
-            >
-              Technology
-            </Link>
-          </li>
-        </ul>
-      </nav> */}
+            <MenuIcon />
+          </button>
+        )}
+
+        {mobileMenuIsOpen && (
+          <div className={styles.MobileMenuContainer}>
+            <div className={styles.CloseBtnContainer}>
+              <button
+                className={styles.Button}
+                onClick={() => mobileMenuHandler(false)}
+              >
+                <CloseIcon />
+              </button>
+            </div>
+            <ul className={styles.MobileMenuItemsContainer}>
+              <li className={`${activePage === "Home" ? styles.Active : ""}`}>
+                <Link
+                  onClick={() => {
+                    setActivePageHandler("Home");
+                  }}
+                  href={"/"}
+                >
+                  Home
+                </Link>
+              </li>
+              <li
+                className={`${
+                  activePage === "Destination" ? styles.Active : ""
+                }`}
+              >
+                <Link
+                  onClick={() => {
+                    setActivePageHandler("Destination");
+                  }}
+                  href={"/destination"}
+                >
+                  Destination
+                </Link>
+              </li>
+              <li className={`${activePage === "Crew" ? styles.Active : ""}`}>
+                <Link
+                  onClick={() => {
+                    setActivePageHandler("Crew");
+                  }}
+                  href={"/crew"}
+                >
+                  Crew
+                </Link>
+              </li>
+              <li
+                className={`${
+                  activePage === "Technology" ? styles.Active : ""
+                }`}
+              >
+                <Link
+                  onClick={() => {
+                    setActivePageHandler("Technology");
+                  }}
+                  href={"/technology"}
+                >
+                  Technology
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

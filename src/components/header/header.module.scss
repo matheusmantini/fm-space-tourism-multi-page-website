@@ -12,32 +12,47 @@
   background-color: var(--color-white);
 }
 
-
-
-/* .Navigation {
-  width: 53vw;
-  backdrop-filter: blur(81.55px);
-  background: rgba(255, 255, 255, 0.04);
+.Button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
 }
 
-.Navigation > ul {
-  margin-right: 100px;
-  margin-left: 30px;
+.CloseBtnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 33.95px;
+  padding-right: 26.45px;
+}
+
+.MobileMenuContainer {
+  backdrop-filter: blur(25px);
+  background: rgba(255, 255, 255, 0.04);
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 254px;
+  height: 100%;
+  color: var(--color-white);
+}
+
+.MobileMenuItemsContainer {
+  list-style: none;
+  margin-top: 64.95px;
+  padding-left: 32px;
   font-family: var(--font-barlow);
   font-weight: 400;
   letter-spacing: 2.7px;
   font-size: 16px;
   text-transform: uppercase;
-  height: 96px;
+  gap: 32px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color: var(--color-white);
-  list-style: none;
+  flex-direction: column;
   counter-reset: list-counter -1;
 }
 
-.Navigation > ul > li:before {
+.MobileMenuItemsContainer > li:before {
   content: "";
   display: inline-block;
   width: 1em;
@@ -47,29 +62,18 @@
   content: counter(list-counter, decimal-leading-zero);
 }
 
-.Navigation > ul > li {
+.MobileMenuItemsContainer > li {
+  display: flex;
+  align-items: center;
+  height: 31px;
   counter-increment: list-counter;
 }
 
-.Navigation ul li a {
-  color: inherit;
+.MobileMenuItemsContainer > li > a {
   text-decoration: none;
-}
-
-.Navigation ul li {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.Navigation ul li:hover {
-  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
-}
-
-.Navigation ul li:active {
-  border-bottom: 3px solid rgb(255, 255, 255);
+  color: var(--color-white);
 }
 
 .Active {
-  border-bottom: 3px solid rgb(255, 255, 255);
-} */
+  border-right: 4px solid var(--color-white);
+}
