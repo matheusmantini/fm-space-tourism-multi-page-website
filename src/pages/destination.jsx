@@ -5,8 +5,6 @@ import { useState } from "react";
 import styles from "../styles/Destination.module.scss";
 
 const Destination = () => {
-  const tabItems = ["Moon", "Mars", "Europa", "Titan"];
-
   const [selectedDestination, setSelectedDestination] = useState("Moon");
 
   const handleSelectTab = (destination) => {
