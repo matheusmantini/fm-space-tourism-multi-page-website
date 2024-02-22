@@ -1,5 +1,6 @@
 import Header from "@/components/header";
 import styles from "@/styles/Home.module.scss";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -17,7 +18,9 @@ export default function Home() {
           </p>
         </div>
         <div className={styles.BtnContent}>
-          <button className={styles.ExploreBtn}>Explore</button>
+          <button className={styles.ExploreBtn}>
+            <Link href={"/destination"}>Explore</Link>
+          </button>
         </div>
       </article>
     </div>
