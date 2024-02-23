@@ -1,7 +1,23 @@
+$mobile-bg: url("../../public/assets/destination/background-destination-mobile.jpg");
+$tablet-bg: url("../../public/assets/destination/background-destination-tablet.jpg");
+$desktop-bg: url("../../public/assets/destination/background-destination-desktop.jpg");
+
+@mixin background-image-responsive {
+  background-image: $mobile-bg;
+
+  @media (min-width: 768px) {
+    background-image: $tablet-bg;
+  }
+
+  @media (min-width: 1024px) {
+    background-image: $desktop-bg;
+  }
+}
+
 .PageContainer {
+  @include background-image-responsive;
   width: 100%;
   height: auto;
-  background-image: url("../../public/assets/destination/background-destination-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
