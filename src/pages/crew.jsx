@@ -40,7 +40,9 @@ const Crew = () => {
               return (
                 <li
                   key={member.name}
-                  className={selectedCrew === member.name && styles.Selected}
+                  className={
+                    selectedCrew === member.name ? styles.CrewSelect : ""
+                  }
                   onClick={() => handleSelectTab(member.name)}
                 >
                   <input
@@ -48,6 +50,7 @@ const Crew = () => {
                     name="crewMembers"
                     value={member.name}
                     checked={selectedCrew === member.name}
+                    onChange={() => handleSelectTab(member.name)}
                   />
                 </li>
               );

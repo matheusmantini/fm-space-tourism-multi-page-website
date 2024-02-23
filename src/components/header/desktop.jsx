@@ -5,10 +5,6 @@ import styles from "./desktopHeader.module.scss";
 const DesktopHeader = () => {
   const { activePage, setActivePageHandler } = usePageContext();
 
-  const handleLinkClick = (page) => {
-    setActivePageHandler(page);
-  };
-
   return (
     <>
       <div className={styles.Line}></div>
@@ -18,7 +14,7 @@ const DesktopHeader = () => {
             <Link
               href={"/"}
               onClick={() => {
-                handleLinkClick("Home");
+                setActivePageHandler("Home");
               }}
             >
               Home
@@ -30,7 +26,7 @@ const DesktopHeader = () => {
             <Link
               href={"/destination"}
               onClick={() => {
-                handleLinkClick("Destination");
+                setActivePageHandler("Destination");
               }}
             >
               Destination
@@ -40,7 +36,7 @@ const DesktopHeader = () => {
             <Link
               href={"/crew"}
               onClick={() => {
-                handleLinkClick("Crew");
+                setActivePageHandler("Crew");
               }}
             >
               Crew
@@ -50,7 +46,7 @@ const DesktopHeader = () => {
             <Link
               href={"/technology"}
               onClick={() => {
-                handleLinkClick("Technology");
+                setActivePageHandler("Technology");
               }}
             >
               Technology

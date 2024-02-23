@@ -37,25 +37,25 @@ const Destination = () => {
         <div>
           <ul className={styles.Tab}>
             <li
-              className={selectedDestination === "Moon" && styles.Selected}
+              className={selectedDestination === "Moon" ? styles.Selected : ""}
               onClick={() => handleSelectTab("Moon")}
             >
               Moon
             </li>
             <li
-              className={selectedDestination === "Mars" && styles.Selected}
+              className={selectedDestination === "Mars" ? styles.Selected : ""}
               onClick={() => handleSelectTab("Mars")}
             >
               Mars
             </li>
             <li
-              className={selectedDestination === "Europa" && styles.Selected}
+              className={selectedDestination === "Europa" ? styles.Selected : ""}
               onClick={() => handleSelectTab("Europa")}
             >
               Europa
             </li>
             <li
-              className={selectedDestination === "Titan" && styles.Selected}
+              className={selectedDestination === "Titan" ? styles.Selected : ""}
               onClick={() => handleSelectTab("Titan")}
             >
               Titan

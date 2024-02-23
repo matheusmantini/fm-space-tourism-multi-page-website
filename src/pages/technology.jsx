@@ -39,7 +39,7 @@ const Technology = () => {
             return (
               <li
                 key={tech.name}
-                className={selectedTech === tech.name && styles.Selected}
+                className={selectedTech === tech.name ? styles.Selected : ""}
                 onClick={() => handleSelectTab(tech.name)}
               >
                 <input
@@ -47,6 +47,7 @@ const Technology = () => {
                   name="techMembers"
                   value={tech.name}
                   checked={selectedTech === tech.name}
+                  onChange={() => handleSelectTab(tech.name)}
                   data-counter={index + 1}
                 />
               </li>
