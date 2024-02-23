@@ -1,80 +1,58 @@
-.Menu {
+@import "../../styles/mixins";
+
+.MenuMobile {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 24px;
+
+  @include small-up {
+    display: flex;
+  }
+  @include medium-up {
+    display: none;
+  }
+  @include large {
+    display: none;
+  }
+}
+
+.MenuDesktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+
+  @include small-down {
+    display: none;
+  }
+
+  @include small-up {
+    display: none;
+  }
+  @include medium-up {
+    display: flex;
+    padding: 0 24px;
+  }
+  @include large {
+    display: flex;
+  }
 }
 
 .Logo {
-  width: 40px;
-  height: 40px;
   border-radius: 50%;
   background-color: var(--color-white);
-}
 
-.Button {
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
-}
-
-.CloseBtnContainer {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 33.95px;
-  padding-right: 26.45px;
-}
-
-.MobileMenuContainer {
-  z-index: 2;
-  backdrop-filter: blur(25px);
-  background: rgba(255, 255, 255, 0.04);
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 254px;
-  height: 100%;
-  color: var(--color-white);
-}
-
-.MobileMenuItemsContainer {
-  list-style: none;
-  margin-top: 64.95px;
-  padding-left: 32px;
-  font-family: var(--font-barlow);
-  font-weight: 400;
-  letter-spacing: 2.7px;
-  font-size: 16px;
-  text-transform: uppercase;
-  gap: 32px;
-  display: flex;
-  flex-direction: column;
-  counter-reset: list-counter -1;
-}
-
-.MobileMenuItemsContainer > li:before {
-  content: "";
-  display: inline-block;
-  width: 1em;
-  text-align: right;
-  margin-right: 11px;
-  font-weight: 700;
-  content: counter(list-counter, decimal-leading-zero);
-}
-
-.MobileMenuItemsContainer > li {
-  display: flex;
-  align-items: center;
-  height: 31px;
-  counter-increment: list-counter;
-}
-
-.MobileMenuItemsContainer > li > a {
-  text-decoration: none;
-  color: var(--color-white);
-}
-
-.Active {
-  border-right: 4px solid var(--color-white);
+  @include small-up {
+    width: 40px;
+    height: 40px;
+  }
+  @include medium-up {
+    width: 50px;
+    height: 50px;
+  }
+  @include large {
+    width: 50px;
+    height: 50px;
+  }
 }

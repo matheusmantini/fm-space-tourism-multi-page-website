@@ -1,0 +1,84 @@
+@import "../../styles/mixins";
+
+// Line não tem nos tablets só no desktop, remover via mixin
+.Line {
+  width: 390px;
+  height: 1px;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.25;
+  margin-left: 64px;
+
+  @include medium-up {
+    display: none;
+  }
+}
+
+.Navigation {
+  width: 707px;
+  backdrop-filter: blur(81.55px);
+  background: rgba(255, 255, 255, 0.04);
+
+  @include medium-up {
+    width: 450px;
+  }
+}
+
+.Navigation > ul {
+  margin-right: 100px;
+  font-family: var(--font-barlow);
+  font-weight: 400;
+  letter-spacing: 2.7px;
+  font-size: 16px;
+  text-transform: uppercase;
+  height: 96px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--color-white);
+  list-style: none;
+  counter-reset: list-counter -1;
+
+  @include medium-up {
+    margin-right: 0px;
+  }
+}
+
+.Navigation > ul > li:before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  text-align: right;
+  margin-right: 11px;
+  font-weight: 700;
+}
+
+.Navigation > ul > li {
+  counter-increment: list-counter;
+}
+
+.Navigation > ul > li:before {
+  content: counter(list-counter, decimal-leading-zero);
+  @include medium-up {
+    display: none;
+  }
+}
+
+.Navigation ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.Navigation ul li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid transparent;
+}
+
+.Navigation ul li:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.Active {
+  border-bottom: 3px solid var(--color-white);
+}

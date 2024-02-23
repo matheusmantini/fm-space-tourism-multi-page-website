@@ -1,3 +1,5 @@
+@import "mixins";
+
 $mobile-bg: url("../../public/assets/home/background-home-mobile.jpg");
 $tablet-bg: url("../../public/assets/home/background-home-tablet.jpg");
 $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
@@ -41,6 +43,12 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
       font-size: 16px;
       letter-spacing: 2.7px;
       margin-bottom: 1rem;
+
+      @include small-up {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 3.38px;
+      }
     }
 
     > h1 {
@@ -52,6 +60,11 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
       letter-spacing: 0;
       text-align: center;
       margin-bottom: 1rem;
+
+      @include small-up {
+        font-size: 150px;
+        line-height: 150px;
+      }
     }
 
     > p:last-child {
@@ -62,6 +75,11 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
       letter-spacing: 0;
       line-height: 25px;
       text-align: center;
+
+      @include small-up {
+        font-size: 16px;
+        line-height: 28px;
+      }
     }
   }
 
@@ -88,6 +106,15 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
       > a {
         text-decoration: none;
         color: var(--color-black);
+      }
+
+      @include small-up {
+        width: 242px;
+        height: 242px;
+
+        font-size: 32px;
+        line-height: 37px;
+        letter-spacing: 2px;
       }
     }
   }
