@@ -79,8 +79,8 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
       height: 285px;
     }
     @include large-only {
-      width: 460px;
-      height: 460px;
+      width: 400px;
+      height: 400px;
     }
     @include large-up {
       width: 635px;
@@ -193,6 +193,7 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
     font-size: 100px;
     line-height: 115px;
     text-align: left;
+    margin-top: 0;
   }
 
   @include large-up {
@@ -211,7 +212,7 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
     min-height: 192px;
   }
 
-  @include large-only {
+  @include large-up {
     min-height: 192px;
   }
 }
@@ -225,7 +226,7 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
   letter-spacing: 0px;
   text-align: center;
   min-height: 100px;
-  margin-bottom: 64px;
+  margin-bottom: 14px;
 
   @include medium-only {
     font-size: 16px;
@@ -239,6 +240,7 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
     width: 444px;
     min-height: 128px;
     text-align: left;
+    margin-bottom: 0;
   }
 
   @include large-up {
@@ -287,8 +289,8 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
   }
 
   @include large-only {
-    margin-bottom: 0;
     align-items: flex-start;
+    margin-bottom: 0;
   }
 
   @include large-up {

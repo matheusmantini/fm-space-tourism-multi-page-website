@@ -39,7 +39,7 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
 
   @include large-only {
     min-height: calc(100% - 144px);
-    padding: 0 96px;
+    padding: 0 0 0 96px;
   }
 
   @include large-up {
@@ -232,6 +232,7 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
 
   @include large-only {
     justify-content: flex-start;
+    height: 40px;
   }
 
   @include large-up {
@@ -298,7 +299,7 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
     max-width: 650px;
     position: absolute;
     left: 50px;
-    top: 154px;
+    top: 100px;
   }
 
   @include large-up {
@@ -355,7 +356,7 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
   }
 
   @include large-only {
-    height: 590px;
+    height: 480px;
   }
 
   @include large-up {
@@ -366,6 +367,10 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
 .ImageContainer > img[alt="Douglas Hurley"] {
   @include medium-only {
     height: 572px;
+  }
+
+  @include large-only {
+    height: 520px;
   }
 
   @include large-up {

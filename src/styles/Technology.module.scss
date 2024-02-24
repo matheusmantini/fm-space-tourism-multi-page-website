@@ -39,6 +39,7 @@ $desktop-bg: url("../../public/assets/technology/background-technology-desktop.j
     padding: 0 24px 0 0;
     position: absolute;
     left: 16px;
+    top: 60px;
   }
 
   @include large-up {
@@ -98,6 +99,10 @@ $desktop-bg: url("../../public/assets/technology/background-technology-desktop.j
     display: none;
   }
 
+  @include large-only {
+    top: 60px;
+  }
+
   @include large-up {
     top: 120px;
   }
@@ -105,6 +110,11 @@ $desktop-bg: url("../../public/assets/technology/background-technology-desktop.j
   > img {
     width: 450px;
     height: auto;
+
+    @include large-only {
+      width: 350px;
+      height: auto;
+    }
 
     @include large-up {
       width: 650px;
@@ -270,6 +280,7 @@ $desktop-bg: url("../../public/assets/technology/background-technology-desktop.j
   }
   @include large-only {
     width: 444px;
+    min-height: 160px;
     font-size: 18px;
     line-height: 32px;
     letter-spacing: 0px;

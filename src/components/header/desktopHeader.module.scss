@@ -10,6 +10,10 @@
   @include medium-only {
     display: none;
   }
+
+  @include large-only {
+    width: 20vw;
+  }
 }
 
 .Navigation {
