@@ -36,6 +36,22 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
     height: calc(100vh - 96px);
     padding: 0 39px;
   }
+
+  @include large {
+    height: calc(100vh - 144px);
+    padding: 0 96px;
+  }
+}
+
+.ContentWrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include large {
+    height: calc(100vh - 144px);
+    flex-direction: row;
+    gap: 115px;
+  }
 }
 
 .ImageContainer {
@@ -49,6 +65,10 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
       width: 285px;
       height: 285px;
     }
+    @include large {
+      width: 460px;
+      height: 460px;
+    }
   }
 }
 
@@ -57,6 +77,10 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+  }
+  @include large {
+    flex-direction: column;
   }
 }
 
@@ -69,6 +93,10 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
   color: var(--color-purple);
 
   @include medium-only {
+    width: 285px;
+  }
+
+  @include large {
     width: 285px;
   }
 
@@ -99,6 +127,13 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
     letter-spacing: 3.38px;
   }
 
+  @include large {
+    text-align: left;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.72px;
+  }
+
   > span {
     font-weight: 700;
     opacity: 0.25;
@@ -121,12 +156,22 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
     font-size: 80px;
     line-height: 92px;
   }
+
+  @include large {
+    font-size: 100px;
+    line-height: 115px;
+    text-align: left;
+  }
 }
 
 .DescriptionContainer {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include large {
+    min-height: 192px;
+  }
 }
 
 .Description {
@@ -145,6 +190,13 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
     line-height: 28px;
     width: 573px;
   }
+
+  @include large {
+    font-size: 18px;
+    line-height: 32px;
+    width: 444px;
+    min-height: 128px;
+  }
 }
 
 .Details {
@@ -156,6 +208,12 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
   @include medium-only {
     flex-direction: row;
     gap: 42px;
+  }
+
+  @include large {
+    flex-direction: row;
+    gap: 42px;
+    justify-content: flex-start;
   }
 }
 
@@ -171,10 +229,19 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
     margin-bottom: 0;
   }
 
+  @include large {
+    margin-bottom: 0;
+    align-items: flex-start;
+  }
+
   &:last-of-type {
     margin-bottom: 57px;
 
     @include medium-only {
+      margin-bottom: 0;
+    }
+
+    @include large {
       margin-bottom: 0;
     }
   }
