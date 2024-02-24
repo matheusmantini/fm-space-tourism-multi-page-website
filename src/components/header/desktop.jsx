@@ -1,10 +1,8 @@
-import { usePageContext } from "@/context/pageContext";
 import Link from "next/link";
 import styles from "./desktopHeader.module.scss";
 
-const DesktopHeader = () => {
-  const { activePage, setActivePageHandler } = usePageContext();
-
+const DesktopHeader = ({ activePage, setActivePageHandler }) => {
+  // ARRUMAR O HEADER DESKTOP QUE NÃO SETA CORRETAMENTE QUAL PÁGINA ESTÁ ABERTA IGUAL NO MOBILE. PORQUE??????
   return (
     <>
       <div className={styles.Line}></div>

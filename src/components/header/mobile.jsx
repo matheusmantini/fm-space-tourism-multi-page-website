@@ -1,11 +1,14 @@
-import { usePageContext } from "@/context/pageContext";
 import CloseIcon from "@/icons/close";
 import MenuIcon from "@/icons/menu";
 import Link from "next/link";
 import styles from "./mobileHeader.module.scss";
 
-const MobileHeader = ({ mobileMenuIsOpen, mobileMenuHandler }) => {
-  const { activePage, setActivePageHandler } = usePageContext();
+const MobileHeader = ({
+  mobileMenuIsOpen,
+  mobileMenuHandler,
+  activePage,
+  setActivePageHandler,
+}) => {
   return (
     <>
       {!mobileMenuIsOpen && (
