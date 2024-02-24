@@ -9,7 +9,7 @@
   @include small-up {
     display: flex;
   }
-  @include medium-up {
+  @include medium-only {
     display: none;
   }
   @include large {
@@ -30,7 +30,7 @@
   @include small-up {
     display: none;
   }
-  @include medium-up {
+  @include medium-only {
     display: flex;
     padding: 0 39px;
   }
@@ -47,7 +47,7 @@
     width: 40px;
     height: 40px;
   }
-  @include medium-up {
+  @include medium-only {
     width: 50px;
     height: 50px;
   }

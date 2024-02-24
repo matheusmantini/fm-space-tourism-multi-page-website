@@ -31,7 +31,7 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
   align-content: center;
   padding: 0 24px;
   color: var(--color-white);
-  @include medium-up {
+  @include medium-only {
     padding: 0 39px;
   }
 }
@@ -39,7 +39,7 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
 .ContentWrapper {
   display: flex;
   flex-direction: column;
-  @include medium-up {
+  @include medium-only {
     flex-direction: column-reverse;
     margin-top: 60px;
   }
@@ -53,7 +53,7 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
   letter-spacing: 2.7px;
   text-transform: uppercase;
 
-  @include medium-up {
+  @include medium-only {
     text-align: left;
     margin-top: 40px;
     font-size: 20px;
@@ -79,7 +79,7 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
   text-transform: uppercase;
   opacity: 0.5;
 
-  @include medium-up {
+  @include medium-only {
     font-size: 24px;
     line-height: 28px;
   }
@@ -96,7 +96,7 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
   text-align: center;
   text-transform: uppercase;
 
-  @include medium-up {
+  @include medium-only {
     font-size: 40px;
     line-height: 46px;
   }
@@ -118,7 +118,7 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
   text-align: center;
   margin-top: 8px;
 
-  @include medium-up {
+  @include medium-only {
     width: 458px;
     min-height: 112px;
     font-size: 16px;
@@ -173,7 +173,7 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
   margin-top: 32px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
-  @include medium-up {
+  @include medium-only {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -184,13 +184,13 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
 .ImageContainer > img {
   width: auto;
 
-  @include medium-up {
+  @include medium-only {
     height: 532px;
   }
 }
 
 .ImageContainer > img[alt="Douglas Hurley"] {
-  @include medium-up {
+  @include medium-only {
     height: 572px;
   }
 }

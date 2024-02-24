@@ -33,9 +33,21 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
   align-items: center;
   justify-content: space-between;
 
+  @include large {
+    height: calc(100vh - 144px);
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-bottom: 80px;
+  }
+
   .TextContent {
-    @include medium-up {
+    @include medium-only {
       margin-top: 106px;
+    }
+
+    @include large {
+      width: 444px;
     }
 
     > p:first-child {
@@ -53,6 +65,14 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
         line-height: 24px;
         letter-spacing: 3.38px;
       }
+
+      @include large {
+        text-align: left;
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: 4.72px;
+        margin-bottom: 2rem;
+      }
     }
 
     > h1 {
@@ -68,6 +88,10 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
       @include small-up {
         font-size: 150px;
         line-height: 150px;
+      }
+
+      @include large {
+        line-height: 172px;
       }
     }
 
@@ -85,10 +109,15 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
         line-height: 28px;
       }
 
-      @include medium-up {
+      @include medium-only {
         width: 444px;
         font-size: 16px;
         line-height: 28px;
+      }
+
+      @include large {
+        font-size: 18px;
+        line-height: 32px;
       }
     }
   }
@@ -121,6 +150,15 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
       @include small-up {
         width: 242px;
         height: 242px;
+
+        font-size: 32px;
+        line-height: 37px;
+        letter-spacing: 2px;
+      }
+
+      @include large {
+        width: 274px;
+        height: 274px;
 
         font-size: 32px;
         line-height: 37px;

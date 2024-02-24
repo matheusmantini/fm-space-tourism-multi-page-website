@@ -32,7 +32,7 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
   padding: 0 24px;
   color: var(--color-white);
 
-  @include medium-up {
+  @include medium-only {
     height: calc(100vh - 96px);
     padding: 0 39px;
   }
@@ -45,7 +45,7 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
   margin-top: 40px;
 
   > img {
-    @include medium-up {
+    @include medium-only {
       width: 285px;
       height: 285px;
     }
@@ -53,7 +53,7 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
 }
 
 .TabContainer {
-  @include medium-up {
+  @include medium-only {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,14 +68,14 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
   padding: 16px 0;
   color: var(--color-purple);
 
-  @include medium-up {
+  @include medium-only {
     width: 285px;
   }
 
   > li {
     padding: 8px 0;
 
-    @include medium-up {
+    @include medium-only {
       font-size: 16px;
       line-height: 19px;
       letter-spacing: 2.7px;
@@ -91,7 +91,7 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
   letter-spacing: 2.7px;
   text-transform: uppercase;
 
-  @include medium-up {
+  @include medium-only {
     text-align: left;
     margin-top: 40px;
     font-size: 20px;
@@ -117,7 +117,7 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
   text-transform: uppercase;
   margin-top: 20px;
 
-  @include medium-up {
+  @include medium-only {
     font-size: 80px;
     line-height: 92px;
   }
@@ -140,7 +140,7 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
   min-height: 100px;
   margin-bottom: 64px;
 
-  @include medium-up {
+  @include medium-only {
     font-size: 16px;
     line-height: 28px;
     width: 573px;
@@ -153,7 +153,7 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
   justify-content: center;
   align-items: center;
 
-  @include medium-up {
+  @include medium-only {
     flex-direction: row;
     gap: 42px;
   }
@@ -167,14 +167,14 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
   gap: 12px;
   margin-bottom: 32px;
 
-  @include medium-up {
+  @include medium-only {
     margin-bottom: 0;
   }
 
   &:last-of-type {
     margin-bottom: 57px;
 
-    @include medium-up {
+    @include medium-only {
       margin-bottom: 0;
     }
   }
