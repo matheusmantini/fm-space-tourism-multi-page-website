@@ -32,16 +32,16 @@ const DesktopHeader = ({ activePage, setActivePageHandler }) => {
       <div className={styles.Line}></div>
       <nav className={styles.Navigation}>
         <ul>
-          <Link
-            href={"/"}
-            onClick={() => {
-              setActivePageHandler("Home");
-            }}
-          >
-            <li className={`${activePage === "Home" ? styles.Active : ""}`}>
+          <li className={`${activePage === "Home" ? styles.Active : ""}`}>
+            <Link
+              href={"/"}
+              onClick={() => {
+                setActivePageHandler("Home");
+              }}
+            >
               Home
-            </li>
-          </Link>
+            </Link>
+          </li>
           <li
             className={`${activePage === "Destination" ? styles.Active : ""}`}
           >
