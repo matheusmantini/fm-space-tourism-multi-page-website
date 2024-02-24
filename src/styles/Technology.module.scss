@@ -125,14 +125,15 @@ $desktop-bg: url("../../public/assets/technology/background-technology-desktop.j
 
 .ContentWrapper {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   height: calc(100vh - 178px);
-  margin-left: 16px;
   position: relative;
 
   @include large-up {
+    flex-direction: row-reverse;
     height: calc(100vh - 191px);
     margin-left: 112px;
+    margin-left: 16px;
   }
 }
 
