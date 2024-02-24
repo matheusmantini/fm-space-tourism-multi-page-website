@@ -34,7 +34,7 @@ const Destination = () => {
             height={259}
           />
         </div>
-        <div>
+        <div className={styles.TabContainer}>
           <ul className={styles.Tab}>
             <li
               className={selectedDestination === "Moon" ? styles.Selected : ""}
@@ -49,7 +49,9 @@ const Destination = () => {
               Mars
             </li>
             <li
-              className={selectedDestination === "Europa" ? styles.Selected : ""}
+              className={
+                selectedDestination === "Europa" ? styles.Selected : ""
+              }
               onClick={() => handleSelectTab("Europa")}
             >
               Europa
@@ -64,17 +66,21 @@ const Destination = () => {
         </div>
         <div>
           <h2 className={styles.Name}>{selectedData?.name}</h2>
-          <p className={styles.Description}>{selectedData?.description}</p>
-          <br />
-          <p className={styles.Detail}>
-            <span className={styles.DetailTitle}>AVG. DISTANCE </span>
-            <span className={styles.DetailInfo}>{selectedData?.distance}</span>
-          </p>
-          <br />
-          <p className={styles.Detail}>
-            <span className={styles.DetailTitle}>Est. travel time </span>
-            <span className={styles.DetailInfo}>{selectedData?.travel}</span>
-          </p>
+          <div className={styles.DescriptionContainer}>
+            <p className={styles.Description}>{selectedData?.description}</p>
+          </div>
+          <div className={styles.Details}>
+            <p className={styles.Detail}>
+              <span className={styles.DetailTitle}>AVG. DISTANCE </span>
+              <span className={styles.DetailInfo}>
+                {selectedData?.distance}
+              </span>
+            </p>
+            <p className={styles.Detail}>
+              <span className={styles.DetailTitle}>Est. travel time </span>
+              <span className={styles.DetailInfo}>{selectedData?.travel}</span>
+            </p>
+          </div>
         </div>
       </div>
     </main>

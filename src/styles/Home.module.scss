@@ -27,13 +27,17 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
 .MainContent {
   padding: 24px;
   color: var(--color-white);
-  height: calc(100vh - 88px);
+  height: calc(100vh - 91px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 
   .TextContent {
+    @include medium-up {
+      margin-top: 106px;
+    }
+
     > p:first-child {
       text-align: center;
       text-transform: uppercase;
@@ -77,6 +81,12 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
       text-align: center;
 
       @include small-up {
+        font-size: 16px;
+        line-height: 28px;
+      }
+
+      @include medium-up {
+        width: 444px;
         font-size: 16px;
         line-height: 28px;
       }
