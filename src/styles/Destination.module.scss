@@ -46,11 +46,13 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
 .ContentWrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @include large {
     height: calc(100vh - 144px);
     flex-direction: row;
-    gap: 115px;
+    gap: 150px;
   }
 }
 
@@ -91,6 +93,7 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
   text-transform: uppercase;
   padding: 16px 0;
   color: var(--color-purple);
+  cursor: pointer;
 
   @include medium-only {
     width: 285px;
@@ -196,6 +199,7 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
     line-height: 32px;
     width: 444px;
     min-height: 128px;
+    text-align: left;
   }
 }
 

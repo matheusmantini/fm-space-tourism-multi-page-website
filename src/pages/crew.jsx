@@ -35,36 +35,38 @@ const Crew = () => {
               height={222}
             />
           </div>
-          <div>
-            <ul className={styles.CrewSelect}>
-              {data.crew.map((member) => {
-                return (
-                  <li
-                    key={member.name}
-                    className={
-                      selectedCrew === member.name ? styles.CrewSelect : ""
-                    }
-                    onClick={() => handleSelectTab(member.name)}
-                  >
-                    <input
-                      type={"radio"}
-                      name="crewMembers"
-                      value={member.name}
-                      checked={selectedCrew === member.name}
-                      onChange={() => handleSelectTab(member.name)}
-                    />
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-          <div>
-            <p className={styles.Role}>
-              <span className={styles.DetailInfo}>{selectedData?.role}</span>
-            </p>
-            <h2 className={styles.CrewName}>{selectedData?.name}</h2>
-            <div className={styles.DescriptionContainer}>
-              <p className={styles.Description}>{selectedData?.bio}</p>
+          <div className={styles.TextContent}>
+            <div>
+              <ul className={styles.CrewSelect}>
+                {data.crew.map((member) => {
+                  return (
+                    <li
+                      key={member.name}
+                      className={
+                        selectedCrew === member.name ? styles.CrewSelect : ""
+                      }
+                      onClick={() => handleSelectTab(member.name)}
+                    >
+                      <input
+                        type={"radio"}
+                        name="crewMembers"
+                        value={member.name}
+                        checked={selectedCrew === member.name}
+                        onChange={() => handleSelectTab(member.name)}
+                      />
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div>
+              <p className={styles.Role}>
+                <span className={styles.DetailInfo}>{selectedData?.role}</span>
+              </p>
+              <h2 className={styles.CrewName}>{selectedData?.name}</h2>
+              <div className={styles.DescriptionContainer}>
+                <p className={styles.Description}>{selectedData?.bio}</p>
+              </div>
             </div>
           </div>
         </div>
