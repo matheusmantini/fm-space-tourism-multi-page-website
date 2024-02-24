@@ -57,7 +57,9 @@ const Technology = () => {
         <div>
           <p className={styles.Subtitle}>The terminology...</p>
           <h2 className={styles.TechName}>{selectedData?.name}</h2>
-          <p className={styles.Description}>{selectedData?.description}</p>
+          <div className={styles.DescriptionContainer}>
+            <p className={styles.Description}>{selectedData?.description}</p>
+          </div>
         </div>
       </div>
     </main>

@@ -1,3 +1,5 @@
+@import "_mixins.scss";
+
 $mobile-bg: url("../../public/assets/technology/background-technology-mobile.jpg");
 $tablet-bg: url("../../public/assets/technology/background-technology-tablet.jpg");
 $desktop-bg: url("../../public/assets/technology/background-technology-desktop.jpg");
@@ -36,6 +38,10 @@ $desktop-bg: url("../../public/assets/technology/background-technology-desktop.j
   align-items: center;
   margin-top: 32px;
 
+  @include medium-up {
+    margin-top: 60px;
+  }
+
   > img {
     width: 100%;
     height: auto;
@@ -50,6 +56,15 @@ $desktop-bg: url("../../public/assets/technology/background-technology-desktop.j
   font-size: 16px;
   letter-spacing: 2.7px;
   text-transform: uppercase;
+
+  @include medium-up {
+    text-align: left;
+    margin-top: 40px;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.38px;
+    padding-left: 39px;
+  }
 
   > span {
     font-weight: 700;
@@ -67,6 +82,12 @@ $desktop-bg: url("../../public/assets/technology/background-technology-desktop.j
   letter-spacing: 2.36px;
   text-align: center;
   text-transform: uppercase;
+
+  @include medium-up {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+  }
 }
 
 .TechName {
@@ -79,6 +100,18 @@ $desktop-bg: url("../../public/assets/technology/background-technology-desktop.j
   letter-spacing: 0px;
   text-align: center;
   text-transform: uppercase;
+
+  @include medium-up {
+    font-size: 40px;
+    line-height: 46px;
+    padding: 16px 0;
+  }
+}
+
+.DescriptionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Description {
@@ -90,6 +123,12 @@ $desktop-bg: url("../../public/assets/technology/background-technology-desktop.j
   letter-spacing: 0px;
   text-align: center;
   margin-top: 7px;
+
+  @include medium-up {
+    font-size: 16px;
+    line-height: 28px;
+    width: 458px;
+  }
 }
 
 .TechSelect {
@@ -120,6 +159,11 @@ $desktop-bg: url("../../public/assets/technology/background-technology-desktop.j
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @include medium-up {
+        width: 60px;
+        height: 60px;
+      }
     }
 
     input[type="radio"]:not(:checked) {
@@ -142,6 +186,12 @@ $desktop-bg: url("../../public/assets/technology/background-technology-desktop.j
       line-height: 18px;
       letter-spacing: 1px;
       text-align: center;
+
+      @include medium-up {
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 1.5px;
+      }
     }
 
     input[type="radio"]:before:not(:checked) {
