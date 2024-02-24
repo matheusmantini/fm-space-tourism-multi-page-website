@@ -37,9 +37,14 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
     padding: 0 39px;
   }
 
-  @include large {
+  @include large-only {
     min-height: calc(100% - 144px);
     padding: 0 96px;
+  }
+
+  @include large-up {
+    min-height: calc(100% - 144px);
+    padding: 0 192px;
   }
 }
 
@@ -52,7 +57,14 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
     margin-top: 60px;
   }
 
-  @include large {
+  @include large-only {
+    flex-direction: row-reverse;
+    flex: 1.2;
+    flex-basis: 60%;
+    position: relative;
+  }
+
+  @include large-up {
     flex-direction: row-reverse;
     flex: 1.2;
     flex-basis: 60%;
@@ -76,11 +88,18 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
     letter-spacing: 3.38px;
   }
 
-  @include large {
+  @include large-only {
     text-align: left;
     font-size: 28px;
     line-height: 34px;
     letter-spacing: 4.72px;
+  }
+
+  @include large-up {
+    text-align: left;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 6.1px;
   }
 
   > span {
@@ -105,9 +124,14 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
     font-size: 24px;
     line-height: 28px;
   }
-  @include large {
+  @include large-only {
     font-size: 32px;
     line-height: 37px;
+    text-align: left;
+  }
+  @include large-up {
+    font-size: 40px;
+    line-height: 46px;
     text-align: left;
   }
 }
@@ -128,9 +152,17 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
     line-height: 46px;
   }
 
-  @include large {
+  @include large-only {
     font-size: 56px;
     line-height: 64px;
+    text-align: left;
+    min-width: 615px;
+    margin-bottom: 19px;
+  }
+
+  @include large-up {
+    font-size: 72px;
+    line-height: 82px;
     text-align: left;
     min-width: 615px;
     margin-bottom: 19px;
@@ -142,7 +174,11 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
   justify-content: center;
   align-items: center;
 
-  @include large {
+  @include large-only {
+    justify-content: flex-start;
+  }
+
+  @include large-up {
     justify-content: flex-start;
   }
 }
@@ -164,10 +200,19 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
     line-height: 28px;
   }
 
-  @include large {
+  @include large-only {
     width: 444px;
     font-size: 18px;
     line-height: 32px;
+    text-align: left;
+    min-height: 128px;
+    margin-top: 0;
+  }
+
+  @include large-up {
+    width: 630px;
+    font-size: 20px;
+    line-height: 36px;
     text-align: left;
     min-height: 128px;
     margin-top: 0;
@@ -185,15 +230,25 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
   color: var(--color-purple);
   z-index: 1;
 
-  @include large {
+  @include large-only {
+    justify-content: flex-start;
+  }
+
+  @include large-up {
     justify-content: flex-start;
   }
 
   > li {
     display: flex;
     flex-direction: row;
+    cursor: pointer;
 
-    @include large {
+    @include large-only {
+      justify-content: center;
+      margin-top: 48px;
+    }
+
+    @include large-up {
       justify-content: center;
       margin-top: 48px;
     }
@@ -207,10 +262,16 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
       border-radius: 50%;
       outline: none;
       margin-right: 5px;
+      cursor: pointer;
 
-      @include large {
+      @include large-only {
         width: 15px;
         height: 15px;
+      }
+
+      @include large-up {
+        width: 20px;
+        height: 20px;
       }
     }
 
@@ -232,9 +293,17 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
   display: flex;
   flex-direction: column-reverse;
 
-  @include large {
+  @include large-only {
     justify-content: center;
     max-width: 650px;
+    position: absolute;
+    left: 50px;
+    top: 154px;
+  }
+
+  @include large-up {
+    justify-content: center;
+    max-width: 850px;
     position: absolute;
     left: 50px;
     top: 154px;
@@ -255,7 +324,18 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
     transform: translateX(-50%);
   }
 
-  @include large {
+  @include large-only {
+    border: 0;
+    margin-top: 0;
+    width: 50%;
+    flex: 0.8;
+    flex-basis: 40%;
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+  }
+
+  @include large-up {
     border: 0;
     margin-top: 0;
     width: 50%;
@@ -274,13 +354,21 @@ $desktop-bg: url("../../public/assets/crew/background-crew-desktop.jpg");
     height: 532px;
   }
 
-  @include large {
+  @include large-only {
     height: 590px;
+  }
+
+  @include large-up {
+    height: 730px;
   }
 }
 
 .ImageContainer > img[alt="Douglas Hurley"] {
   @include medium-only {
     height: 572px;
+  }
+
+  @include large-up {
+    height: 930px;
   }
 }

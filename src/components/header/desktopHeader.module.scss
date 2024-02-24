@@ -20,6 +20,10 @@
   @include medium-only {
     width: 450px;
   }
+
+  @include large-up {
+    width: 930px;
+  }
 }
 
 .Navigation > ul {
@@ -39,6 +43,10 @@
 
   @include medium-only {
     margin-right: 0px;
+  }
+
+  @include large-up {
+    font-size: 20px;
   }
 }
 

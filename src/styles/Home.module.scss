@@ -33,7 +33,14 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
   align-items: center;
   justify-content: space-between;
 
-  @include large {
+  @include large-only {
+    height: calc(100vh - 144px);
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  @include large-up {
     height: calc(100vh - 144px);
     flex-direction: row;
     justify-content: space-around;
@@ -45,8 +52,11 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
       margin-top: 106px;
     }
 
-    @include large {
+    @include large-only {
       width: 444px;
+    }
+    @include large-up {
+      width: 500px;
     }
 
     > p:first-child {
@@ -65,11 +75,19 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
         letter-spacing: 3.38px;
       }
 
-      @include large {
+      @include large-only {
         text-align: left;
         font-size: 28px;
         line-height: 34px;
         letter-spacing: 4.72px;
+        margin-bottom: 2rem;
+      }
+
+      @include large-up {
+        text-align: left;
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: 6.10px;
         margin-bottom: 2rem;
       }
     }
@@ -89,8 +107,13 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
         line-height: 150px;
       }
 
-      @include large {
+      @include large-only {
         line-height: 172px;
+      }
+
+      @include large-up {
+        font-size: 162px;
+        line-height: 194px;
       }
     }
 
@@ -114,9 +137,14 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
         line-height: 28px;
       }
 
-      @include large {
+      @include large-only {
         font-size: 18px;
         line-height: 32px;
+      }
+
+      @include large-up {
+        font-size: 20px;
+        line-height: 36px;
       }
     }
   }
@@ -155,9 +183,18 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
         letter-spacing: 2px;
       }
 
-      @include large {
+      @include large-only {
         width: 274px;
         height: 274px;
+
+        font-size: 32px;
+        line-height: 37px;
+        letter-spacing: 2px;
+      }
+
+      @include large-up {
+        width: 306px;
+        height: 306px;
 
         font-size: 32px;
         line-height: 37px;

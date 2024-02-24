@@ -18,7 +18,7 @@ $desktop-bg: url("../../public/assets/technology/background-technology-desktop.j
 
 .PageContainer {
   @include background-image-responsive;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,9 +30,29 @@ $desktop-bg: url("../../public/assets/technology/background-technology-desktop.j
   align-content: center;
   padding: 0 24px;
   color: var(--color-white);
+
+  @include large-only {
+    min-height: calc(100% - 144px);
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 24px 0 0;
+    position: absolute;
+    left: 16px;
+  }
+
+  @include large-up {
+    min-height: calc(100% - 144px);
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 24px 0 0;
+    position: absolute;
+    left: 16px;
+  }
 }
 
-.ImageContainer {
+.ImageContainerLandscape {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,9 +62,84 @@ $desktop-bg: url("../../public/assets/technology/background-technology-desktop.j
     margin-top: 60px;
   }
 
+  @include large-only {
+    display: none;
+  }
+
+  @include large-up {
+    display: none;
+  }
+
   > img {
     width: 100%;
     height: auto;
+
+    @include large-only {
+      display: none;
+    }
+
+    @include large-up {
+      display: none;
+    }
+  }
+}
+
+.ImageContainerPortrait {
+  position: absolute;
+  right: 0;
+  justify-content: end;
+  align-items: end;
+
+  @include small-down {
+    display: none;
+  }
+
+  @include medium-only {
+    display: none;
+  }
+
+  @include large-up {
+    top: 120px;
+  }
+
+  > img {
+    width: 450px;
+    height: auto;
+
+    @include large-up {
+      width: 650px;
+      height: auto;
+    }
+  }
+}
+
+.ContentWrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  height: calc(100vh - 178px);
+  margin-left: 16px;
+  position: relative;
+
+  @include large-up {
+    height: calc(100vh - 191px);
+    margin-left: 112px;
+  }
+}
+
+.TextContent {
+  @include large-only {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 470px;
+  }
+  @include large-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 700px;
   }
 }
 
@@ -64,6 +159,22 @@ $desktop-bg: url("../../public/assets/technology/background-technology-desktop.j
     line-height: 24px;
     letter-spacing: 3.38px;
     padding-left: 39px;
+  }
+
+  @include large-only {
+    text-align: left;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.72px;
+    margin-left: 96px;
+  }
+
+  @include large-up {
+    text-align: left;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 6.1px;
+    margin-left: 192px;
   }
 
   > span {
@@ -88,6 +199,20 @@ $desktop-bg: url("../../public/assets/technology/background-technology-desktop.j
     line-height: 19px;
     letter-spacing: 2.7px;
   }
+
+  @include large-only {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    text-align: left;
+  }
+
+  @include large-up {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 3.2px;
+    text-align: left;
+  }
 }
 
 .TechName {
@@ -105,6 +230,20 @@ $desktop-bg: url("../../public/assets/technology/background-technology-desktop.j
     font-size: 40px;
     line-height: 46px;
     padding: 16px 0;
+  }
+
+  @include large-only {
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
+  @include large-up {
+    font-size: 72px;
+    line-height: 82px;
+    letter-spacing: 0px;
+    text-align: left;
   }
 }
 
@@ -129,6 +268,20 @@ $desktop-bg: url("../../public/assets/technology/background-technology-desktop.j
     line-height: 28px;
     width: 458px;
   }
+  @include large-only {
+    width: 444px;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  @include large-up {
+    width: 600px;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
 }
 
 .TechSelect {
@@ -143,9 +296,22 @@ $desktop-bg: url("../../public/assets/technology/background-technology-desktop.j
   color: var(--color-purple);
   z-index: 1;
 
+  @include large-only {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 240px;
+  }
+
+  @include large-up {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 240px;
+  }
+
   > li {
     display: flex;
     flex-direction: row;
+    cursor: pointer;
 
     input[type="radio"] {
       -webkit-appearance: none;
@@ -163,6 +329,16 @@ $desktop-bg: url("../../public/assets/technology/background-technology-desktop.j
       @include medium-only {
         width: 60px;
         height: 60px;
+      }
+
+      @include large-only {
+        width: 80px;
+        height: 80px;
+      }
+
+      @include large-up {
+        width: 100px;
+        height: 100px;
       }
     }
 
@@ -186,11 +362,29 @@ $desktop-bg: url("../../public/assets/technology/background-technology-desktop.j
       line-height: 18px;
       letter-spacing: 1px;
       text-align: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
 
       @include medium-only {
         font-size: 24px;
         line-height: 28px;
         letter-spacing: 1.5px;
+      }
+
+      @include large-only {
+        font-size: 32px;
+        line-height: 37px;
+        letter-spacing: 2px;
+      }
+
+      @include large-up {
+        font-size: 44px;
+        line-height: 46px;
+        letter-spacing: 2.5px;
       }
     }
 

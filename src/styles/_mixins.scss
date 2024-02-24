@@ -1,6 +1,7 @@
 $small-width: 480px;
 $medium-width: 768px;
 $large-width: 1024px;
+$extra-large-width: 1367px;
 
 @mixin extra-small {
   @media (max-width: #{$small-width - 1px}) {
@@ -38,8 +39,14 @@ $large-width: 1024px;
   }
 }
 
-@mixin large {
-  @media (min-width: #{$large-width}) {
+@mixin large-only {
+  @media (min-width: #{$large-width}) and (max-width: #{$extra-large-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin large-up {
+  @media (min-width: #{$extra-large-width}) {
     @content;
   }
 }

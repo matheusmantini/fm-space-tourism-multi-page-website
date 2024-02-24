@@ -25,40 +25,50 @@ const Technology = () => {
       <p className={styles.Title}>
         <span>03</span>Space Launch 101
       </p>
-      <div className={styles.ImageContainer}>
-        <Image
-          src={`/${selectedData?.images?.landscape}`}
-          alt={selectedData?.name}
-          width={180}
-          height={222}
-        />
-      </div>
-      <div className={styles.PageContent}>
-        <ul className={styles.TechSelect}>
-          {data.technology.map((tech, index) => {
-            return (
-              <li
-                key={tech.name}
-                className={selectedTech === tech.name ? styles.Selected : ""}
-                onClick={() => handleSelectTab(tech.name)}
-              >
-                <input
-                  type={"radio"}
-                  name="techMembers"
-                  value={tech.name}
-                  checked={selectedTech === tech.name}
-                  onChange={() => handleSelectTab(tech.name)}
-                  data-counter={index + 1}
-                />
-              </li>
-            );
-          })}
-        </ul>
-        <div>
-          <p className={styles.Subtitle}>The terminology...</p>
-          <h2 className={styles.TechName}>{selectedData?.name}</h2>
-          <div className={styles.DescriptionContainer}>
-            <p className={styles.Description}>{selectedData?.description}</p>
+      <div className={styles.ContentWrapper}>
+        <div className={styles.ImageContainerLandscape}>
+          <Image
+            src={`/${selectedData?.images?.landscape}`}
+            alt={selectedData?.name}
+            width={180}
+            height={222}
+          />
+        </div>
+        <div className={styles.ImageContainerPortrait}>
+          <Image
+            src={`/${selectedData?.images?.portrait}`}
+            alt={selectedData?.name}
+            width={552}
+            height={858}
+          />
+        </div>
+        <div className={styles.PageContent}>
+          <ul className={styles.TechSelect}>
+            {data.technology.map((tech, index) => {
+              return (
+                <li
+                  key={tech.name}
+                  className={selectedTech === tech.name ? styles.Selected : ""}
+                  onClick={() => handleSelectTab(tech.name)}
+                >
+                  <input
+                    type={"radio"}
+                    name="techMembers"
+                    value={tech.name}
+                    checked={selectedTech === tech.name}
+                    onChange={() => handleSelectTab(tech.name)}
+                    data-counter={index + 1}
+                  />
+                </li>
+              );
+            })}
+          </ul>
+          <div className={styles.TextContent}>
+            <p className={styles.Subtitle}>The terminology...</p>
+            <h2 className={styles.TechName}>{selectedData?.name}</h2>
+            <div className={styles.DescriptionContainer}>
+              <p className={styles.Description}>{selectedData?.description}</p>
+            </div>
           </div>
         </div>
       </div>

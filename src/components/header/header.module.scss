@@ -12,7 +12,10 @@
   @include medium-only {
     display: none;
   }
-  @include large {
+  @include large-only {
+    display: none;
+  }
+  @include large-up {
     display: none;
   }
 }
@@ -34,7 +37,11 @@
     display: flex;
     padding: 0 39px;
   }
-  @include large {
+  @include large-only {
+    display: flex;
+    padding: 24px 96px;
+  }
+  @include large-up {
     display: flex;
     padding: 24px 96px;
   }
@@ -52,7 +59,11 @@
     width: 50px;
     height: 50px;
   }
-  @include large {
+  @include large-only {
+    width: 50px;
+    height: 50px;
+  }
+  @include large-up {
     width: 50px;
     height: 50px;
   }
