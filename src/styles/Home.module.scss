@@ -87,7 +87,7 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
         text-align: left;
         font-size: 36px;
         line-height: 44px;
-        letter-spacing: 6.10px;
+        letter-spacing: 6.1px;
         margin-bottom: 2rem;
       }
     }
@@ -154,8 +154,10 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
     justify-content: center;
     align-items: center;
     margin-bottom: 48px;
+    box-sizing: border-box;
 
     .ExploreBtn {
+      box-sizing: border-box;
       width: 150px;
       height: 150px;
       font-family: var(--font-bellefair);
@@ -168,10 +170,37 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
       font-size: 20px;
       letter-spacing: 1.25px;
       text-align: center;
+      
+      &:hover {
+        transform: scale(1.2);
+      }
 
       > a {
         text-decoration: none;
         color: var(--color-black);
+        cursor: pointer;
+        border-radius: 50%;
+        padding: 60px 20px;
+        transition: filter 0.3s ease-in-out;
+
+        &:hover {
+          filter: opacity(0.6);
+        }
+
+        @include medium-only {
+          border-radius: 50%;
+          padding: 100px 40px;
+        }
+
+        @include large-only {
+          border-radius: 50%;
+          padding: 119px 62px;
+        }
+
+        @include large-up {
+          padding: 135px 78px;
+          border-radius: 50%;
+        }
       }
 
       @include small-up {

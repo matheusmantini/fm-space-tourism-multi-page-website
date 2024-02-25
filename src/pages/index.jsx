@@ -19,7 +19,9 @@ export default function Home() {
         </div>
         <div className={styles.BtnContent}>
           <button className={styles.ExploreBtn}>
-            <Link href={"/destination"}>Explore</Link>
+            <Link href={"/destination"}>
+              Explore
+            </Link>
           </button>
         </div>
       </article>
