@@ -32,48 +32,50 @@ const DesktopHeader = ({ activePage, setActivePageHandler }) => {
       <div className={styles.Line}></div>
       <nav className={styles.Navigation}>
         <ul>
-          <li className={`${activePage === "Home" ? styles.Active : ""}`}>
-            <Link
-              href={"/"}
-              onClick={() => {
-                setActivePageHandler("Home");
-              }}
-            >
-              Home
-            </Link>
-          </li>
-          <li
-            className={`${activePage === "Destination" ? styles.Active : ""}`}
+          <Link
+            href={"/"}
+            onClick={() => {
+              setActivePageHandler("Home");
+            }}
           >
-            <Link
-              href={"/destination"}
-              onClick={() => {
-                setActivePageHandler("Destination");
-              }}
+            <li className={`${activePage === "Home" ? styles.Active : ""}`}>
+              Home
+            </li>
+          </Link>
+          <Link
+            href={"/destination"}
+            onClick={() => {
+              setActivePageHandler("Destination");
+            }}
+          >
+            <li
+              className={`${activePage === "Destination" ? styles.Active : ""}`}
             >
               Destination
-            </Link>
-          </li>
-          <li className={`${activePage === "Crew" ? styles.Active : ""}`}>
-            <Link
-              href={"/crew"}
-              onClick={() => {
-                setActivePageHandler("Crew");
-              }}
-            >
+            </li>
+          </Link>
+          <Link
+            href={"/crew"}
+            onClick={() => {
+              setActivePageHandler("Crew");
+            }}
+          >
+            <li className={`${activePage === "Crew" ? styles.Active : ""}`}>
               Crew
-            </Link>
-          </li>
-          <li className={`${activePage === "Technology" ? styles.Active : ""}`}>
-            <Link
-              href={"/technology"}
-              onClick={() => {
-                setActivePageHandler("Technology");
-              }}
+            </li>
+          </Link>
+          <Link
+            href={"/technology"}
+            onClick={() => {
+              setActivePageHandler("Technology");
+            }}
+          >
+            <li
+              className={`${activePage === "Technology" ? styles.Active : ""}`}
             >
               Technology
-            </Link>
-          </li>
+            </li>
+          </Link>
         </ul>
       </nav>
     </>
