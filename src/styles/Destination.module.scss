@@ -99,7 +99,7 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
     transform: translateY(100%);
     animation: mergeAndShake 2s ease-out forwards,
       shake 4s infinite ease-in-out 2s;
-
+      
     @include medium-only {
       width: 285px;
       height: 285px;
