@@ -16,6 +16,27 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
   }
 }
 
+@keyframes mergeAndShake {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25%,
+  75% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
 .PageContainer {
   @include background-image-responsive;
   width: 100%;
@@ -74,6 +95,11 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
   margin-top: 40px;
 
   > img {
+    opacity: 0;
+    transform: translateY(100%);
+    animation: mergeAndShake 2s ease-out forwards,
+      shake 4s infinite ease-in-out 2s;
+
     @include medium-only {
       width: 285px;
       height: 285px;
@@ -163,7 +189,7 @@ $desktop-bg: url("../../public/assets/destination/background-destination-desktop
     text-align: left;
     font-size: 36px;
     line-height: 44px;
-    letter-spacing: 6.10px;
+    letter-spacing: 6.1px;
   }
 
   > span {
