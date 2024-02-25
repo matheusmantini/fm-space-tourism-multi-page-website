@@ -16,6 +16,13 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
   }
 }
 
+@keyframes mergeAndShake {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .PageContainer {
   @include background-image-responsive;
   width: 100%;
@@ -170,7 +177,10 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
       font-size: 20px;
       letter-spacing: 1.25px;
       text-align: center;
-      
+      opacity: 0;
+      transform: translateY(100%);
+      animation: mergeAndShake 2s ease-out forwards;
+
       &:hover {
         transform: scale(1.2);
       }
