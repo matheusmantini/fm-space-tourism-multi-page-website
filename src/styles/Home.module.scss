@@ -45,14 +45,16 @@ $desktop-bg: url("../../public/assets/home/background-home-desktop.jpg");
     height: calc(100vh - 144px);
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-end;
+    padding-bottom: 131px;
   }
 
   @include large-up {
     height: calc(100vh - 144px);
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-end;
+    padding-bottom: 131px;
   }
 
   .TextContent {
